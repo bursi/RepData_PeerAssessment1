@@ -1,0 +1,36 @@
+Reproducible Research - Course Project 1
+========================================================
+
+Load the provided data into R:
+
+```{r}
+data <- read.csv(file="activity.csv", header=TRUE, skip=0, colClasses=c("numeric","Date","numeric"));
+```
+
+Calculate the total steps per day:
+
+```{r}
+stepsperday <- aggregate(steps ~ date, FUN=sum, data=data);
+```
+
+Calculate the mean of the total steps per day:
+
+```{r}
+mean(stepsperday$steps);
+```
+
+Calculate the median of the total steps per day:
+
+```{r}
+median(stepsperday$steps);
+```
+
+
+
+```{r fig.width=7, fig.height=6}
+plot(1,1)
+```
+
+```{r}
+
+```
